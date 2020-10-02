@@ -29,8 +29,8 @@ jobs:
             for file in $(curl -H "Accept: application/vnd.github.v3+json" -H "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" -sSL $CORE_TAG_URL | grep 'browser_download_url' | cut -d\" -f4); do
               wget $file
             done
-            git lfs install
-            git lfs track *
+           # git lfs install
+           # git lfs track *
             git add .
             git config user.name "Scaleya"
             git config user.email "61817665+Scaleya@users.noreply.github.com"
